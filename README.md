@@ -1,27 +1,41 @@
 # example
 ```
-import { reducer, middleware } from 'react-progress-redux'
+import { Progress, reducer } from 'react-progress-2-redux'
 
 class Application extends React.PureComponent {
     render () {
         return (
-            <h1>hello world :)</h1>
+            <div>
+                <Progress />
+                {/* the content */}
+            </div>
         )
     }
 }
 
 let store = createStore(
     combineReducers({
-        progress: reducer
-    }),
-    applyMiddleware(middleware, thunk)
+        progressRedux: reducer
+    })
 )
 
 ReactDOM.render(
     <Provider store={store}>
-        <Progress />
         <Application />
     </Provider>,
     document.querySelector('#root')
 )
+```
+
+```
+import { showProgress, hideProgress } from 'react-progress-2-redux'
+
+// your-reducer.jsx
+export function loadUsers () {
+    return async dispatch => {
+        dispatch(showProgress())
+        await myCoolAsyncRequest()
+        dispatch(hideProgress())
+    }
+}
 ```
