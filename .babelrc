@@ -1,0 +1,10 @@
+{
+	"presets": ["react"],
+	"plugins": [
+		"transform-decorators-legacy",
+		"transform-object-rest-spread",
+		"transform-class-properties",
+		"transform-regenerator",
+		"transform-async-functions"
+	]
+}
