@@ -1,15 +1,16 @@
 {
   "name": "react-progress-2-redux",
   "version": "1.0.0",
-  "description": "``` import { reducer, middleware } from 'react-progress-redux'",
-  "main": "index.js",
+  "description": "React progress 2 (redux version)",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config demo/webpack.config.js --hot --inline",
-    "build": "NODE_ENV=production babel ../src -d ../lib"
+    "build": "NODE_ENV=production babel ./src --out-dir ./lib",
+    "prepublish": "npm run build ; mv src/component.css lib/component.css"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ruslan Prytula <ruslan.prytula@gmail.com> (http://60devs.com)",
+  "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.10"
   },
@@ -36,5 +37,22 @@
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "keywords": [
+    "react-progress-2-redux",
+    "react-progress-redux",
+    "react-progress-indicator",
+    "loading-indicator",
+    "react-loading-indicator"
+  ],
+  "files": [
+    "lib/main.css",
+    "lib/main.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "http://milworm.github.io/react-progress-2-redux/#readme",
+  "bugs": {
+    "url": "https://github.com/milworm/react-progress-2-redux/issues"
   }
 }
