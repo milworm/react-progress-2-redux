@@ -46,8 +46,11 @@
     "react-loading-indicator"
   ],
   "files": [
-    "lib/main.css",
-    "lib/main.js",
+    "lib/component.css",
+    "lib/component.js",
+    "lib/index.js",
+    "lib/middleware.js",
+    "lib/reducer.js",
     "README.md",
     "LICENSE"
   ],
