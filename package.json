@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config demo/webpack.config.js --hot --inline",
     "build": "NODE_ENV=production babel ./src --out-dir ./lib",
-    "prepublish": "npm run build ; mv src/component.css lib/component.css"
+    "prepublish": "npm run build ; cp src/component.css lib/component.css"
   },
   "author": "Ruslan Prytula <ruslan.prytula@gmail.com> (http://60devs.com)",
   "license": "MIT",
