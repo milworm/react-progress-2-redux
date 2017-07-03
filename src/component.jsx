@@ -24,6 +24,8 @@ export default class Component extends React.PureComponent {
 			this.show()
 		else if(nextProps.action == 'hide')
 			this.hide()
+		else if(nextProps.action == 'hideAll')
+			this.hideAll()
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {

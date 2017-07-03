@@ -1,11 +1,15 @@
 import Progress from './component.jsx'
 import { reducer, actions } from './reducer.jsx'
 
-const { showProgress, hideProgress } = actions
+const { show, hide, hideAll } = actions
 
 export {
 	Progress,
 	reducer,
-	showProgress,
-	hideProgress
+	show,
+	hide,
+	hideAll,
+	showProgress: show,
+	hideProgress: hide,
+	hideProgressAll: hideAll,
 }
