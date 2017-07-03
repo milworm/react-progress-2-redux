@@ -28,14 +28,25 @@ ReactDOM.render(
 ```
 
 ```
-import { showProgress, hideProgress } from 'react-progress-2-redux'
+import { show, hide } from 'react-progress-2-redux'
 
 // your-reducer.jsx
 export function loadUsers () {
     return async dispatch => {
-        dispatch(showProgress())
+        dispatch(show())
         await myCoolAsyncRequest()
-        dispatch(hideProgress())
+        dispatch(hide())
+    }
+}
+
+// your-reducer.jsx
+export function loadTasks () {
+    return async dispatch => {
+        dispatch(show())
+        dispatch(show())
+        dispatch(show())
+        let data = await myCoolAsyncRequest()
+        dispatch(hideAll())
     }
 }
 ```

@@ -9,7 +9,7 @@ export {
 	show,
 	hide,
 	hideAll,
-	showProgress: show,
-	hideProgress: hide,
-	hideProgressAll: hideAll,
+	show as showProgress,
+	hide as hideProgress,
+	hideAll as hideProgressAll
 }
