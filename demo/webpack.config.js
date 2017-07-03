@@ -32,6 +32,7 @@ module.exports = {
     alias: {
       'app': path.join(__dirname, 'js'),
       'progress-dev': path.join(__dirname, '..', 'src')
-    }
+    },
+    extensions: ['.js', '.jsx', '.css', '.scss']
   }
 }

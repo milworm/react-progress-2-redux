@@ -1,5 +1,5 @@
-import Progress from './component.jsx'
-import { reducer, actions } from './reducer.jsx'
+import Progress from './component'
+import { reducer, actions } from './reducer'
 
 const { show, hide, hideAll } = actions
 
